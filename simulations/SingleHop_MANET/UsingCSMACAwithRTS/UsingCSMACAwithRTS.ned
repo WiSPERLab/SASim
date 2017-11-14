@@ -1,0 +1,54 @@
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see http://www.gnu.org/licenses/.
+// 
+
+package ai_crn.simulations.SingleHop_MANET.UsingCSMACAwithRTS;
+
+import inet.networklayer.configurator.ipv4.IPv4NetworkConfigurator;
+import inet.node.inet.AdhocHost;
+import inet.physicallayer.ieee80211.packetlevel.Ieee80211ScalarRadioMedium;
+import inet.visualizer.contract.IIntegratedVisualizer;
+
+network UsingCSMACAwithRTS
+{
+    parameters:
+        int nodeCount;
+        **.bitrate = 11Mbps;
+        **.arpType = "GlobalARP";
+        @display("bgl=3");       
+    submodules:
+        visualizer: <default("IntegratedCanvasVisualizer")> like IIntegratedVisualizer if hasVisualizer() {
+            parameters:
+                @display("p=100,50");
+        }
+        configurator: IPv4NetworkConfigurator {
+            parameters:
+                @display("p=100,150");
+        }
+        radioMedium: Ieee80211ScalarRadioMedium {
+            parameters:
+                @display("p=100,250");
+        }
+        node[nodeCount]: AdhocHost {
+            parameters:
+                numUdpApps = 1;
+                udpApp[0].typename = "UDPBasicApp";
+                udpApp[0].destAddresses = "224.0.0.1";
+                udpApp[0].localPort = 1;
+                udpApp[0].destPort = 1;
+                udpApp[0].messageLength = 100B;
+                udpApp[0].joinLocalMulticastGroups = true;              
+        }
+}
+
