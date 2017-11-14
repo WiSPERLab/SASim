@@ -1,0 +1,263 @@
+version 2
+run BMacWithAPSKDimensionalRadio-0-20171113-12:05:03-6572
+attr configname BMacWithAPSKDimensionalRadio
+attr datetime 20171113-12:05:03
+attr experiment BMacWithAPSKDimensionalRadio
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithNoRTS
+attr processid 6572
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].typename "\"WirelessNic\""
+param *.host[*].wlan[*].macType "\"BMacLayer\""
+param *.radioMediumType "\"APSKDimensionalRadioMedium\""
+param *.radioMedium.backgroundNoise.power -110dBm
+param *.host[*].wlan[*].radioType "\"APSKDimensionalRadio\""
+param *.host[*].wlan[*].radio.carrierFrequency 2.412GHz
+param *.host[*].wlan[*].radio.bandwidth 2MHz
+param *.host[*].wlan[*].radio.transmitter.power 2mW
+param *.host[*].wlan[*].radio.transmitter.bitrate 2Mbps
+param *.host[*].wlan[*].radio.transmitter.preambleDuration 0s
+param *.host[*].wlan[*].radio.transmitter.headerBitLength 100b
+param *.host[*].wlan[*].radio.transmitter.modulation "\"BPSK\""
+param *.host[*].wlan[*].radio.receiver.sensitivity -85dBm
+param *.host[*].wlan[*].radio.receiver.energyDetection -85dBm
+param *.host[*].wlan[*].radio.receiver.snirThreshold 4dB
+param *.numHosts 3
+param *.host[*].mobilityType "\"MassMobility\""
+param *.host[*].mobility.constraintAreaMinX 0m
+param *.host[*].mobility.constraintAreaMinY 0m
+param *.host[*].mobility.constraintAreaMinZ 0m
+param *.host[*].mobility.constraintAreaMaxX 60m
+param *.host[*].mobility.constraintAreaMaxY 40m
+param *.host[*].mobility.constraintAreaMaxZ 0m
+param *.host[*].mobility.initFromDisplayString false
+param *.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param *.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param *.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param *.host[*].mobility.updateInterval 100ms
+param *.host[0].numPingApps 0
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].printPing true
+
+vector 0 UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UsingCSMACAwithNoRTS.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 4 UsingCSMACAwithNoRTS.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 5 UsingCSMACAwithNoRTS.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 6 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 7 UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 8 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 9 UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 10 UsingCSMACAwithNoRTS.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	0	0	0
+0	1	0	1
+0	14	0.043599490263	2
+0	15	0.053599490263	1
+0	23	0.153599490263	2
+0	24	0.163599490263	1
+0	32	0.263599490263	2
+0	33	0.273599490263	1
+0	41	0.373599490263	2
+0	42	0.383599490263	1
+0	50	0.483599490263	2
+0	51	0.493599490263	1
+0	67	0.593599490263	2
+0	71	0.603599490263	1
+0	175	0.703599490263	2
+1	0	0	0
+1	2	0	1
+1	12	0.018508208147	2
+1	13	0.028508208147	1
+1	21	0.128508208147	2
+1	22	0.138508208147	1
+1	30	0.238508208147	2
+1	31	0.248508208147	1
+1	39	0.348508208147	2
+1	40	0.358508208147	1
+1	48	0.458508208147	2
+1	49	0.468508208147	1
+1	72	0.641967590051	2
+1	74	0.651967590051	3
+2	0	0	0
+2	3	0	1
+2	10	0.002592622791	2
+2	11	0.012592622791	1
+2	19	0.112592622791	2
+2	20	0.122592622791	1
+2	28	0.222592622791	2
+2	29	0.232592622791	1
+2	37	0.332592622791	2
+2	38	0.342592622791	1
+2	46	0.442592622791	2
+2	47	0.452592622791	1
+2	60	0.552592622791	2
+2	61	0.562592622791	1
+2	73	0.647810864802	2
+3	10	0.002592622791	1
+3	11	0.012592622791	0
+3	19	0.112592622791	1
+3	20	0.122592622791	0
+3	28	0.222592622791	1
+3	29	0.232592622791	0
+3	37	0.332592622791	1
+3	38	0.342592622791	0
+3	46	0.442592622791	1
+3	47	0.452592622791	0
+3	60	0.552592622791	1
+3	61	0.562592622791	0
+3	73	0.647810864802	1
+3	77	0.651967632038	3
+3	80	0.652022632038	1
+3	85	0.6569676323	3
+3	88	0.6570226323	1
+3	93	0.661967632563	3
+3	96	0.662022632563	1
+3	102	0.666967632828	3
+3	105	0.667022632828	1
+3	111	0.671967633094	3
+3	114	0.672022633094	1
+3	120	0.676967633361	3
+3	123	0.677022633361	1
+3	129	0.681967633629	3
+3	132	0.682022633629	1
+3	138	0.686967633899	3
+3	141	0.687022633899	1
+3	147	0.69196763417	3
+3	150	0.69202263417	1
+3	156	0.696967634442	3
+3	159	0.697022634442	1
+3	168	0.701967634716	3
+3	171	0.702022634716	1
+3	178	0.70696763499	3
+3	181	0.70702263499	1
+3	188	0.711967635266	3
+3	191	0.712022635266	1
+3	198	0.716967635543	3
+3	201	0.717022635543	1
+3	208	0.721967635821	3
+3	211	0.722022635821	1
+3	218	0.7269676361	3
+3	221	0.7270226361	1
+3	228	0.73196763638	3
+3	231	0.73202263638	1
+3	238	0.736967636662	3
+3	241	0.737022636662	1
+3	248	0.741967636944	3
+4	12	0.018508208147	1
+4	13	0.028508208147	0
+4	21	0.128508208147	1
+4	22	0.138508208147	0
+4	30	0.238508208147	1
+4	31	0.248508208147	0
+4	39	0.348508208147	1
+4	40	0.358508208147	0
+4	48	0.458508208147	1
+4	49	0.468508208147	0
+4	72	0.641967590051	1
+4	74	0.651967590051	0
+5	14	0.043599490263	1
+5	15	0.053599490263	0
+5	23	0.153599490263	1
+5	24	0.163599490263	0
+5	32	0.263599490263	1
+5	33	0.273599490263	0
+5	41	0.373599490263	1
+5	42	0.383599490263	0
+5	50	0.483599490263	1
+5	51	0.493599490263	0
+5	67	0.593599490263	1
+5	71	0.603599490263	0
+5	175	0.703599490263	1
+5	179	0.706967724907	3
+5	184	0.707022724907	1
+5	189	0.711967724936	3
+5	194	0.712022724936	1
+5	199	0.716967724966	3
+5	204	0.717022724966	1
+5	209	0.721967724998	3
+5	214	0.722022724998	1
+5	219	0.72696772503	3
+5	224	0.72702272503	1
+5	229	0.731967725064	3
+5	234	0.732022725064	1
+5	239	0.736967725099	3
+5	244	0.737022725099	1
+6	55	0.548813502304	0
+7	57	0.548813502304	1
+8	62	0.592844616389	0
+9	64	0.592844616389	1
+10	74	0.651967590051	1
+10	76	0.651967590051	2
+10	79	0.652022590051	1
+10	84	0.656967590051	2
+10	87	0.657022590051	1
+10	92	0.661967590051	2
+10	95	0.662022590051	1
+10	101	0.666967590051	2
+10	104	0.667022590051	1
+10	110	0.671967590051	2
+10	113	0.672022590051	1
+10	119	0.676967590051	2
+10	122	0.677022590051	1
+10	128	0.681967590051	2
+10	131	0.682022590051	1
+10	137	0.686967590051	2
+10	140	0.687022590051	1
+10	146	0.691967590051	2
+10	149	0.692022590051	1
+10	155	0.696967590051	2
+10	158	0.697022590051	1
+10	167	0.701967590051	2
+10	170	0.702022590051	1
+10	177	0.706967590051	2
+10	180	0.707022590051	1
+10	187	0.711967590051	2
+10	190	0.712022590051	1
+10	197	0.716967590051	2
+10	200	0.717022590051	1
+10	207	0.721967590051	2
+10	210	0.722022590051	1
+10	217	0.726967590051	2
+10	220	0.727022590051	1
+10	227	0.731967590051	2
+10	230	0.732022590051	1
+10	237	0.736967590051	2
+10	240	0.737022590051	1
+10	247	0.741967590051	2
+

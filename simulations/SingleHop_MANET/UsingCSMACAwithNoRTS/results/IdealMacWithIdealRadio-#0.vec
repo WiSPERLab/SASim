@@ -1,0 +1,338 @@
+version 2
+run IdealMacWithIdealRadio-0-20171113-12:11:39-7876
+attr configname IdealMacWithIdealRadio
+attr datetime 20171113-12:11:39
+attr experiment IdealMacWithIdealRadio
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithNoRTS
+attr processid 7876
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].typename "\"IdealWirelessNic\""
+param *.host[*].wlan[*].bitrate 2Mbps
+param *.host[*].wlan[*].mac.headerLength 10B
+param *.radioMediumType "\"IdealRadioMedium\""
+param *.host[*].wlan[*].radioType "\"IdealRadio\""
+param *.host[*].wlan[*].radio.transmitter.bitrate 2Mbps
+param *.host[*].wlan[*].radio.transmitter.preambleDuration 0s
+param *.host[*].wlan[*].radio.transmitter.headerBitLength 100b
+param *.host[*].wlan[*].radio.transmitter.communicationRange 100m
+param *.host[*].wlan[*].radio.transmitter.interferenceRange 0m
+param *.host[*].wlan[*].radio.transmitter.detectionRange 0m
+param *.host[*].wlan[*].radio.receiver.ignoreInterference true
+param *.numHosts 3
+param *.host[*].mobilityType "\"MassMobility\""
+param *.host[*].mobility.constraintAreaMinX 0m
+param *.host[*].mobility.constraintAreaMinY 0m
+param *.host[*].mobility.constraintAreaMinZ 0m
+param *.host[*].mobility.constraintAreaMaxX 60m
+param *.host[*].mobility.constraintAreaMaxY 40m
+param *.host[*].mobility.constraintAreaMaxZ 0m
+param *.host[*].mobility.initFromDisplayString false
+param *.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param *.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param *.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param *.host[*].mobility.updateInterval 100ms
+param *.host[0].numPingApps 0
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].printPing true
+
+vector 0 UsingCSMACAwithNoRTS.host[0].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 UsingCSMACAwithNoRTS.host[1].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 UsingCSMACAwithNoRTS.host[2].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 UsingCSMACAwithNoRTS.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 7 UsingCSMACAwithNoRTS.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 8 UsingCSMACAwithNoRTS.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 UsingCSMACAwithNoRTS.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 10 UsingCSMACAwithNoRTS.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 UsingCSMACAwithNoRTS.host[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 12 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 13 UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 14 UsingCSMACAwithNoRTS.host[1].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 15 UsingCSMACAwithNoRTS.host[1].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 16 UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 17 UsingCSMACAwithNoRTS.host[1].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 18 UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 19 UsingCSMACAwithNoRTS.host[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 20 UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 21 UsingCSMACAwithNoRTS.host[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 22 UsingCSMACAwithNoRTS.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 23 UsingCSMACAwithNoRTS.host[0].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 24 UsingCSMACAwithNoRTS.host[0].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 25 UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 26 UsingCSMACAwithNoRTS.host[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 27 UsingCSMACAwithNoRTS.host[2].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 28 UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 29 UsingCSMACAwithNoRTS.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 30 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 31 UsingCSMACAwithNoRTS.host[1].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 32 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 33 UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 34 UsingCSMACAwithNoRTS.host[2].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 35 UsingCSMACAwithNoRTS.host[2].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 36 UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 37 UsingCSMACAwithNoRTS.host[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 38 UsingCSMACAwithNoRTS.host[1].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 39 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 40 UsingCSMACAwithNoRTS.host[2].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+0	0	0	0
+1	0	0	0
+2	0	0	0
+3	0	0	0
+3	0	0	4
+4	0	0	0
+4	0	0	4
+5	0	0	0
+5	0	0	4
+6	0	0	1
+6	30	0.548813636874	3
+6	36	0.549015636874	1
+6	57	0.549217906012	3
+6	61	0.549643906012	1
+6	91	0.592844738494	3
+6	97	0.593046738494	1
+6	118	0.593248982743	3
+6	122	0.593674982743	1
+6	181	1.548813657753	3
+7	0	0	1
+7	43	0.549015636874	2
+7	46	0.549217636874	1
+7	68	0.549643906012	2
+7	71	0.550069906012	1
+7	104	0.593046738494	2
+7	107	0.593248738494	1
+7	129	0.593674982743	2
+7	132	0.594100982743	1
+8	0	0	1
+8	45	0.549015771443	3
+8	49	0.549217771443	1
+8	70	0.54964404058	3
+8	74	0.55007004058	1
+8	90	0.592844655394	3
+8	93	0.593046655394	1
+8	106	0.59304687302	3
+8	115	0.59324887302	1
+8	117	0.593248899636	3
+8	120	0.593674899636	1
+8	131	0.593675117269	3
+8	138	0.594101117269	1
+9	0	0	1
+9	28	0.548813502304	2
+9	31	0.549015502304	1
+9	55	0.549217771443	2
+9	58	0.549643771443	1
+9	179	1.548813502304	2
+9	182	1.549239502304	1
+10	0	0	1
+10	29	0.548813539245	3
+10	32	0.549015539245	1
+10	44	0.549015756216	3
+10	47	0.549217756216	1
+10	56	0.549217808402	3
+10	59	0.549643808402	1
+10	69	0.549644025391	3
+10	72	0.550070025391	1
+10	105	0.593046860612	3
+10	108	0.593248860612	1
+10	130	0.593675104903	3
+10	133	0.594101104903	1
+10	180	1.548813581605	3
+11	0	0	1
+11	89	0.592844616389	2
+11	92	0.593046616389	1
+11	114	0.593248860612	2
+11	119	0.593674860612	1
+12	22	0.548813502304	0
+12	174	1.548813502304	1
+13	24	0.548813502304	1
+14	26	0.548813502304	28
+14	53	0.549217771443	84
+14	177	1.548813502304	84
+15	26	0.548813502304	0
+15	53	0.549217771443	0
+15	177	1.548813502304	0
+16	27	0.548813502304	28
+16	54	0.549217771443	84
+16	178	1.548813502304	84
+17	27	0.548813502304	38
+17	54	0.549217771443	94
+17	178	1.548813502304	94
+18	33	0.549015539245	38
+18	48	0.549217756216	38
+18	60	0.549643808402	94
+18	73	0.550070025391	94
+18	109	0.593248860612	38
+18	134	0.594101104903	94
+19	33	0.549015539245	28
+19	109	0.593248860612	28
+19	134	0.594101104903	84
+20	37	0.549015636874	38
+20	62	0.549643906012	94
+20	98	0.593046738494	38
+20	123	0.593674982743	94
+21	37	0.549015636874	28
+21	62	0.549643906012	84
+21	98	0.593046738494	28
+21	123	0.593674982743	84
+22	39	0.549015636874	1
+22	100	0.593046738494	1
+23	41	0.549015636874	28
+23	66	0.549643906012	84
+23	102	0.593046738494	28
+23	127	0.593674982743	84
+24	41	0.549015636874	0
+24	66	0.549643906012	0
+24	102	0.593046738494	0
+24	127	0.593674982743	0
+25	42	0.549015636874	28
+25	67	0.549643906012	84
+25	103	0.593046738494	28
+25	128	0.593674982743	84
+26	42	0.549015636874	38
+26	67	0.549643906012	94
+26	103	0.593046738494	38
+26	128	0.593674982743	94
+27	48	0.549217756216	38
+27	60	0.549643808402	94
+27	73	0.550070025391	94
+28	50	0.549217771443	38
+28	75	0.55007004058	94
+28	94	0.593046655394	38
+28	116	0.59324887302	38
+28	121	0.593674899636	94
+28	139	0.594101117269	94
+29	50	0.549217771443	28
+29	75	0.55007004058	84
+29	94	0.593046655394	28
+30	78	0.55007004058	0
+31	78	0.55007004058	0.001256538276
+32	83	0.592844616389	0
+33	85	0.592844616389	1
+34	87	0.592844616389	28
+34	112	0.593248860612	84
+35	87	0.592844616389	0
+35	112	0.593248860612	0
+36	88	0.592844616389	28
+36	113	0.593248860612	84
+37	88	0.592844616389	38
+37	113	0.593248860612	94
+38	116	0.59324887302	38
+38	121	0.593674899636	94
+38	139	0.594101117269	94
+39	137	0.594101104903	0
+40	137	0.594101104903	0.001256488514
+

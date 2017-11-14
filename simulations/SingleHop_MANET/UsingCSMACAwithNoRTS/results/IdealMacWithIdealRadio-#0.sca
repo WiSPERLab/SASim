@@ -1,0 +1,1130 @@
+version 2
+run IdealMacWithIdealRadio-0-20171113-12:11:39-7876
+attr configname IdealMacWithIdealRadio
+attr datetime 20171113-12:11:39
+attr experiment IdealMacWithIdealRadio
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithNoRTS
+attr processid 7876
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].typename "\"IdealWirelessNic\""
+param *.host[*].wlan[*].bitrate 2Mbps
+param *.host[*].wlan[*].mac.headerLength 10B
+param *.radioMediumType "\"IdealRadioMedium\""
+param *.host[*].wlan[*].radioType "\"IdealRadio\""
+param *.host[*].wlan[*].radio.transmitter.bitrate 2Mbps
+param *.host[*].wlan[*].radio.transmitter.preambleDuration 0s
+param *.host[*].wlan[*].radio.transmitter.headerBitLength 100b
+param *.host[*].wlan[*].radio.transmitter.communicationRange 100m
+param *.host[*].wlan[*].radio.transmitter.interferenceRange 0m
+param *.host[*].wlan[*].radio.transmitter.detectionRange 0m
+param *.host[*].wlan[*].radio.receiver.ignoreInterference true
+param *.numHosts 3
+param *.host[*].mobilityType "\"MassMobility\""
+param *.host[*].mobility.constraintAreaMinX 0m
+param *.host[*].mobility.constraintAreaMinY 0m
+param *.host[*].mobility.constraintAreaMinZ 0m
+param *.host[*].mobility.constraintAreaMaxX 60m
+param *.host[*].mobility.constraintAreaMaxY 40m
+param *.host[*].mobility.constraintAreaMaxZ 0m
+param *.host[*].mobility.initFromDisplayString false
+param *.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param *.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param *.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param *.host[*].mobility.updateInterval 100ms
+param *.host[0].numPingApps 0
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].printPing true
+
+scalar UsingCSMACAwithNoRTS.radioMedium.propagation "Arrival computation count" 18
+scalar UsingCSMACAwithNoRTS.radioMedium "transmission count" 9
+scalar UsingCSMACAwithNoRTS.radioMedium "radio frame send count" 18
+scalar UsingCSMACAwithNoRTS.radioMedium "reception computation count" 18
+scalar UsingCSMACAwithNoRTS.radioMedium "interference computation count" 71
+scalar UsingCSMACAwithNoRTS.radioMedium "reception decision computation count" 16
+scalar UsingCSMACAwithNoRTS.radioMedium "listening decision computation count" 37
+scalar UsingCSMACAwithNoRTS.radioMedium "reception cache hit" 84.745762711864
+attr unit %
+scalar UsingCSMACAwithNoRTS.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar UsingCSMACAwithNoRTS.radioMedium "noise cache hit" 0
+attr unit %
+scalar UsingCSMACAwithNoRTS.radioMedium "snir cache hit" 50
+attr unit %
+scalar UsingCSMACAwithNoRTS.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar UsingCSMACAwithNoRTS.radioMedium "reception result cache hit" 0
+attr unit %
+scalar UsingCSMACAwithNoRTS.host[0].networkLayer.arp sentReply:count 2
+attr title "ARP replies sent, count"
+scalar UsingCSMACAwithNoRTS.host[0].networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar UsingCSMACAwithNoRTS.host[0].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[0].networkLayer.arp completedARPResolution:count 2
+attr title "ARP completed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[0].networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic UsingCSMACAwithNoRTS.host[0].wlan[0].queue queueingTime:histogram
+field count 4
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	4
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue rcvdPk:count 4
+attr interpolationmode none
+attr title "received packets, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].queue rcvdPk:sum(packetBytes) 224
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromHL:count 4
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 224
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac passedUpPk:count 4
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac passedUpPk:sum(packetBytes) 224
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromLL:count 4
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 264
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac sentDownPk:count 4
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].mac sentDownPk:sum(packetBytes) 264
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+statistic UsingCSMACAwithNoRTS.host[0].wlan[0].radio symbolErrorRate:histogram
+field count 4
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	4
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[0].wlan[0].radio bitErrorRate:histogram
+field count 4
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	4
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[0].wlan[0].radio packetErrorRate:histogram
+field count 4
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	4
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[0].wlan[0].radio minSNIR:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].radio transmissionState:count 9
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].radio receptionState:count 10
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+scalar UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar UsingCSMACAwithNoRTS.host[1].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[1].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[1].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic UsingCSMACAwithNoRTS.host[1].wlan[0].queue queueingTime:histogram
+field count 3
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	3
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue rcvdPk:count 3
+attr interpolationmode none
+attr title "received packets, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].queue rcvdPk:sum(packetBytes) 196
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac droppedPkNotForUs:count 3
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 226
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromHL:count 3
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 196
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac passedUpPk:count 3
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac passedUpPk:sum(packetBytes) 140
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromLL:count 6
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 396
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac sentDownPk:count 3
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].mac sentDownPk:sum(packetBytes) 226
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+statistic UsingCSMACAwithNoRTS.host[1].wlan[0].radio symbolErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[1].wlan[0].radio bitErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[1].wlan[0].radio packetErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[1].wlan[0].radio minSNIR:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].radio transmissionState:count 7
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].radio receptionState:count 13
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] "Pings sent" 2
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] "ping loss rate (%)" 50
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] "ping out-of-order rate (%)" 0
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] pingRxSeq:count 1
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] pingTxSeq:count 2
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UsingCSMACAwithNoRTS.host[1].pingApp[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UsingCSMACAwithNoRTS.host[1].pingApp[0] rtt:histogram
+field count 1
+field mean 0.001256538276
+field stddev nan
+field min 0.001256538276
+field max 0.001256538276
+field sum 0.001256538276
+field sqrsum 1.5788884390531e-006
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.498743461724	0
+bin	-0.46541012839067	0
+bin	-0.43207679505733	0
+bin	-0.398743461724	0
+bin	-0.36541012839067	0
+bin	-0.33207679505733	0
+bin	-0.298743461724	0
+bin	-0.26541012839067	0
+bin	-0.23207679505733	0
+bin	-0.198743461724	0
+bin	-0.16541012839067	0
+bin	-0.13207679505733	0
+bin	-0.098743461724	0
+bin	-0.065410128390667	0
+bin	-0.032076795057333	0
+bin	0.001256538276	1
+bin	0.034589871609333	0
+bin	0.067923204942667	0
+bin	0.101256538276	0
+bin	0.13458987160933	0
+bin	0.16792320494267	0
+bin	0.201256538276	0
+bin	0.23458987160933	0
+bin	0.26792320494267	0
+bin	0.301256538276	0
+bin	0.33458987160933	0
+bin	0.36792320494267	0
+bin	0.401256538276	0
+bin	0.43458987160933	0
+bin	0.46792320494267	0
+bin	0.501256538276	0
+scalar UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar UsingCSMACAwithNoRTS.host[2].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[2].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[2].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+statistic UsingCSMACAwithNoRTS.host[2].wlan[0].queue queueingTime:histogram
+field count 2
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	2
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue rcvdPk:count 2
+attr interpolationmode none
+attr title "received packets, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].queue rcvdPk:sum(packetBytes) 112
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac droppedPkNotForUs:count 3
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 226
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromHL:count 2
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 112
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac passedUpPk:count 3
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac passedUpPk:sum(packetBytes) 140
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromLL:count 6
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 396
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac sentDownPk:count 2
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].mac sentDownPk:sum(packetBytes) 132
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+statistic UsingCSMACAwithNoRTS.host[2].wlan[0].radio symbolErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[2].wlan[0].radio bitErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[2].wlan[0].radio packetErrorRate:histogram
+field count 6
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	6
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+statistic UsingCSMACAwithNoRTS.host[2].wlan[0].radio minSNIR:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].radio transmissionState:count 5
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].radio receptionState:count 14
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] "Pings sent" 1
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] "ping loss rate (%)" 0
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] "ping out-of-order rate (%)" 0
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] pingRxSeq:count 1
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] pingTxSeq:count 1
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] numOutOfOrderArrivals:last nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar UsingCSMACAwithNoRTS.host[2].pingApp[0] numLost:last nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic UsingCSMACAwithNoRTS.host[2].pingApp[0] rtt:histogram
+field count 1
+field mean 0.001256488514
+field stddev nan
+field min 0.001256488514
+field max 0.001256488514
+field sum 0.001256488514
+field sqrsum 1.5787633858139e-006
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	-0.498743511486	0
+bin	-0.46541017815267	0
+bin	-0.43207684481933	0
+bin	-0.398743511486	0
+bin	-0.36541017815267	0
+bin	-0.33207684481933	0
+bin	-0.298743511486	0
+bin	-0.26541017815267	0
+bin	-0.23207684481933	0
+bin	-0.198743511486	0
+bin	-0.16541017815267	0
+bin	-0.13207684481933	0
+bin	-0.098743511486	0
+bin	-0.065410178152667	0
+bin	-0.032076844819333	0
+bin	0.001256488514	1
+bin	0.034589821847333	0
+bin	0.067923155180667	0
+bin	0.101256488514	0
+bin	0.13458982184733	0
+bin	0.16792315518067	0
+bin	0.201256488514	0
+bin	0.23458982184733	0
+bin	0.26792315518067	0
+bin	0.301256488514	0
+bin	0.33458982184733	0
+bin	0.36792315518067	0
+bin	0.401256488514	0
+bin	0.43458982184733	0
+bin	0.46792315518067	0
+bin	0.501256488514	0
+

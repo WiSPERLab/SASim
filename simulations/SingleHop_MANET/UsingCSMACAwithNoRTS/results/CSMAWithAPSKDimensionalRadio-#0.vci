@@ -1,0 +1,133 @@
+file 9704 1510603710                                            
+version 2
+run CSMAWithAPSKDimensionalRadio-0-20171113-12:07:21-5952
+attr configname CSMAWithAPSKDimensionalRadio
+attr datetime 20171113-12:07:21
+attr experiment CSMAWithAPSKDimensionalRadio
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithNoRTS
+attr processid 5952
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].typename "\"WirelessNic\""
+param *.host[*].wlan[*].macType "\"CSMA\""
+param *.host[*].wlan[*].mac.useMACAcks false
+param *.host[*].wlan[*].mac.rxSetupTime 0s
+param *.radioMediumType "\"APSKDimensionalRadioMedium\""
+param *.radioMedium.backgroundNoise.power -110dBm
+param *.host[*].wlan[*].radioType "\"APSKDimensionalRadio\""
+param *.host[*].wlan[*].radio.carrierFrequency 2.412GHz
+param *.host[*].wlan[*].radio.bandwidth 2MHz
+param *.host[*].wlan[*].radio.transmitter.power 2mW
+param *.host[*].wlan[*].radio.transmitter.bitrate 2Mbps
+param *.host[*].wlan[*].radio.transmitter.preambleDuration 0s
+param *.host[*].wlan[*].radio.transmitter.headerBitLength 100b
+param *.host[*].wlan[*].radio.transmitter.modulation "\"BPSK\""
+param *.host[*].wlan[*].radio.receiver.sensitivity -85dBm
+param *.host[*].wlan[*].radio.receiver.energyDetection -85dBm
+param *.host[*].wlan[*].radio.receiver.snirThreshold 4dB
+param *.numHosts 3
+param *.host[*].mobilityType "\"MassMobility\""
+param *.host[*].mobility.constraintAreaMinX 0m
+param *.host[*].mobility.constraintAreaMinY 0m
+param *.host[*].mobility.constraintAreaMinZ 0m
+param *.host[*].mobility.constraintAreaMaxX 60m
+param *.host[*].mobility.constraintAreaMaxY 40m
+param *.host[*].mobility.constraintAreaMaxZ 0m
+param *.host[*].mobility.initFromDisplayString false
+param *.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param *.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param *.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param *.host[*].mobility.updateInterval 100ms
+param *.host[0].numPingApps 0
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].printPing true
+
+vector 0 UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UsingCSMACAwithNoRTS.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 4 UsingCSMACAwithNoRTS.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 5 UsingCSMACAwithNoRTS.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 6 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 7 UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 8 UsingCSMACAwithNoRTS.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 9 UsingCSMACAwithNoRTS.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 10 UsingCSMACAwithNoRTS.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 11 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 12 UsingCSMACAwithNoRTS.host[1].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 13 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 14 UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 15 UsingCSMACAwithNoRTS.host[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 16 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 17 UsingCSMACAwithNoRTS.host[2].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+0	5087 350 0 302 0 2.551505621315 16 0 3 37 95
+1	5437 206 0 288 0 2.550159502304 10 0 3 22 56
+2	5643 160 0 224 0 1.593870616389 8 0 3 17 43
+3	5803 672 0 302 0 2.551505621315 29 0 3 36 78
+4	6475 669 0 303 0 2.551505740305 29 0 3 45 105
+5	7144 667 0 308 0 2.551505799222 29 0 3 48 114
+6	7811 71 22 279 0.548813502304 2.548813502304 3 0 2 3 5
+7	7882 23 24 24 0.548813502304 0.548813502304 1 1 1 1 1
+8	7905 376 28 288 0.549261502304 2.550159502304 16 0 2 16 24
+9	8281 47 40 105 0.549615636873 0.593646738536 2 1 1 2 2
+10	8328 692 44 302 0.550383636873 2.551505621315 28 0 2 28 42
+11	9020 74 82 307 0.553110040565 2.551505740305 3 0 2 3 5
+12	9094 113 82 307 0.553110040565 2.551505740305 3 0.002372311005 0.004296538261 0.009361087267 3.1336245986709e-005
+13	9207 49 87 215 0.592844616389 1.592844616389 2 0 1 1 1
+14	9256 24 89 89 0.592844616389 0.592844616389 1 1 1 1 1
+15	9280 296 93 224 0.593292616389 1.593870616389 12 0 2 12 18
+16	9576 50 145 245 0.597141105398 1.595216988887 2 0 1 1 1
+17	9626 76 145 245 0.597141105398 1.595216988887 2 0.002372372498 0.004296489009 0.006668861507 2.4087969073725e-005
+

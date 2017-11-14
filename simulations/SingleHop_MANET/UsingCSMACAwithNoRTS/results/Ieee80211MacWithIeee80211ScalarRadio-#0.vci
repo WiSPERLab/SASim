@@ -1,0 +1,286 @@
+file 58952 1510603468                                           
+version 2
+run Ieee80211MacWithIeee80211ScalarRadio-0-20171113-12:02:18-7068
+attr configname Ieee80211MacWithIeee80211ScalarRadio
+attr datetime 20171113-12:02:18
+attr experiment Ieee80211MacWithIeee80211ScalarRadio
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithNoRTS
+attr processid 7068
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host[*].wlan[*].radioType "\"Ieee80211ScalarRadio\""
+param **.mac.dataBitrate 54Mbps
+param **.mac.basicBitrate 2Mbps
+param **.mac.multicastBitrate 2Mbps
+param **.mac.controlBitrate 2Mbps
+param *.host[*].wlan[*].typename "\"Ieee80211Nic\""
+param *.host[*].wlan[*].mgmtType "\"Ieee80211MgmtAdhoc\""
+param *.radioMediumType "\"APSKScalarRadioMedium\""
+param *.radioMedium.backgroundNoise.power -110dBm
+param *.host[*].wlan[*].radioType "\"APSKScalarRadio\""
+param *.host[*].wlan[*].radio.carrierFrequency 2.412GHz
+param *.host[*].wlan[*].radio.bandwidth 2MHz
+param *.host[*].wlan[*].radio.transmitter.power 2mW
+param *.host[*].wlan[*].radio.transmitter.bitrate 2Mbps
+param *.host[*].wlan[*].radio.transmitter.preambleDuration 0s
+param *.host[*].wlan[*].radio.transmitter.headerBitLength 100b
+param *.host[*].wlan[*].radio.transmitter.modulation "\"BPSK\""
+param *.host[*].wlan[*].radio.receiver.sensitivity -85dBm
+param *.host[*].wlan[*].radio.receiver.energyDetection -85dBm
+param *.host[*].wlan[*].radio.receiver.snirThreshold 4dB
+param *.numHosts 3
+param *.host[*].mobilityType "\"MassMobility\""
+param *.host[*].mobility.constraintAreaMinX 0m
+param *.host[*].mobility.constraintAreaMinY 0m
+param *.host[*].mobility.constraintAreaMinZ 0m
+param *.host[*].mobility.constraintAreaMaxX 60m
+param *.host[*].mobility.constraintAreaMaxY 40m
+param *.host[*].mobility.constraintAreaMaxZ 0m
+param *.host[*].mobility.initFromDisplayString false
+param *.host[*].mobility.changeInterval "truncnormal(2s, 0.5s)"
+param *.host[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param *.host[*].mobility.speed "truncnormal(20mps, 8mps)"
+param *.host[*].mobility.updateInterval 100ms
+param *.host[0].numPingApps 0
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].printPing true
+
+vector 0 UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UsingCSMACAwithNoRTS.host[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UsingCSMACAwithNoRTS.host[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 UsingCSMACAwithNoRTS.host[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 UsingCSMACAwithNoRTS.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 7 UsingCSMACAwithNoRTS.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 8 UsingCSMACAwithNoRTS.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 UsingCSMACAwithNoRTS.host[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 10 UsingCSMACAwithNoRTS.host[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 11 UsingCSMACAwithNoRTS.host[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 12 UsingCSMACAwithNoRTS.host[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 13 UsingCSMACAwithNoRTS.host[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 14 UsingCSMACAwithNoRTS.host[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 15 UsingCSMACAwithNoRTS.host[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 16 UsingCSMACAwithNoRTS.host[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 17 UsingCSMACAwithNoRTS.host[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 18 UsingCSMACAwithNoRTS.host[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 19 UsingCSMACAwithNoRTS.host[2].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 20 UsingCSMACAwithNoRTS.host[2].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 21 UsingCSMACAwithNoRTS.host[2].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 22 UsingCSMACAwithNoRTS.host[2].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 23 UsingCSMACAwithNoRTS.host[2].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 24 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 25 UsingCSMACAwithNoRTS.host[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 26 UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 27 UsingCSMACAwithNoRTS.host[1].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 28 UsingCSMACAwithNoRTS.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 29 UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 30 UsingCSMACAwithNoRTS.host[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 31 UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 32 UsingCSMACAwithNoRTS.host[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 33 UsingCSMACAwithNoRTS.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 34 UsingCSMACAwithNoRTS.host[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 35 UsingCSMACAwithNoRTS.host[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 36 UsingCSMACAwithNoRTS.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 37 UsingCSMACAwithNoRTS.host[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 38 UsingCSMACAwithNoRTS.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 39 UsingCSMACAwithNoRTS.host[1].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 40 UsingCSMACAwithNoRTS.host[1].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 41 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 42 UsingCSMACAwithNoRTS.host[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 43 UsingCSMACAwithNoRTS.host[2].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 44 UsingCSMACAwithNoRTS.host[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 45 UsingCSMACAwithNoRTS.host[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 46 UsingCSMACAwithNoRTS.host[2].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 47 UsingCSMACAwithNoRTS.host[2].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+0	11272 612 0 590 0 2.592900793963 27 0 3 65 169
+1	11884 9 0 0 0 0 1 0 0 0 0
+2	11893 396 0 554 0 2.549951740343 18 0 3 42 108
+3	12289 9 0 0 0 0 1 0 0 0 0
+4	12298 352 0 578 0 2.592890616389 16 0 3 37 95
+5	12650 9 0 0 0 0 1 0 0 0 0
+6	12659 1315 0 590 0 2.592900793963 56 0 3 73 163
+7	13974 1315 0 592 0 2.592900912355 56 0 3 88 208
+8	15289 1293 0 578 0 2.592890616389 55 0 3 88 208
+9	16582 2676 0 590 0 2.592900793963 114 0 2 63 115
+10	19258 2048 0 590 0 2.592900793963 84 0 0 0 0
+11	21306 2048 0 590 0 2.592900793963 84 0 0 0 0
+12	23354 2048 0 590 0 2.592900793963 84 0 0 0 0
+13	25402 2048 0 590 0 2.592900793963 84 0 0 0 0
+14	27450 2830 0 580 0 2.59289068383 116 0 2 22 42
+15	30280 2438 0 580 0 2.59289068383 100 0 0 0 0
+16	32718 2438 0 580 0 2.59289068383 100 0 0 0 0
+17	35156 2438 0 580 0 2.59289068383 100 0 0 0 0
+18	37594 2438 0 580 0 2.59289068383 100 0 0 0 0
+19	40032 2844 0 573 0 2.592844616389 116 0 2 22 42
+20	42876 2444 0 573 0 2.592844616389 100 0 0 0 0
+21	45320 2444 0 573 0 2.592844616389 100 0 0 0 0
+22	47764 2444 0 573 0 2.592844616389 100 0 0 0 0
+23	50208 2444 0 573 0 2.592844616389 100 0 0 0 0
+24	52652 74 22 491 0.548813502304 2.548813502304 3 0 2 3 5
+25	52726 24 24 24 0.548813502304 0.548813502304 1 1 1 1 1
+26	52750 105 27 495 0.548813502304 2.548813502304 4 64 120 424 47296
+27	52855 208 30 546 0.548813502304 2.549703740343 8 14 120 480 48080
+28	53063 788 31 554 0.548813502304 2.549951740343 32 0 2 32 48
+29	53851 523 38 557 0.549261539245 2.549951809211 20 14 120 1278 129252
+30	54374 104 38 437 0.549261539245 1.59370498875 4 64 120 368 36992
+31	54478 392 43 582 0.549261636874 2.592890793963 15 14 120 946 95964
+32	54870 211 43 582 0.549261636874 2.592890793963 8 64 120 848 94592
+33	55081 49 46 177 0.549261636874 0.593292738494 2 1 1 2 2
+34	55130 212 49 588 0.549261636874 2.592890793963 8 64 120 848 94592
+35	55342 340 52 589 0.549311636874 2.592900793963 13 14 120 812 81368
+36	55682 1238 53 591 0.549311636874 2.592900793963 50 0 2 51 77
+37	56920 498 62 580 0.549349771443 2.59289068383 19 14 120 1264 129056
+38	57418 132 62 539 0.549349771443 2.549693740343 5 64 120 488 51392
+39	57550 75 131 543 0.550658040577 2.549693740343 3 0 2 3 5
+40	57625 114 131 543 0.550658040577 2.549693740343 3 0.000760310927 0.001844538273 0.003485087239 4.75521315158e-006
+41	57739 75 153 565 0.592844616389 2.592844616389 3 0 2 3 5
+42	57814 25 155 155 0.592844616389 0.592844616389 1 1 1 1 1
+43	57839 107 158 569 0.592844616389 2.592844616389 4 64 120 424 47296
+44	57946 184 161 572 0.592844616389 2.592844616389 7 14 120 466 47884
+45	58130 696 162 578 0.592844616389 2.592890616389 28 0 2 28 42
+46	58826 49 260 441 0.594789105054 1.59370498875 2 0 1 1 1
+47	58875 75 260 441 0.594789105054 1.59370498875 2 0.000860372361 0.001944488665 0.002804861026 4.5212767678862e-006
+
