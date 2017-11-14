@@ -1,0 +1,500 @@
+file 114935 1510612629                                          
+version 2
+run NonSynchronized-0-20171113-14:33:26-3056
+attr configname NonSynchronized
+attr datetime 20171113-14:33:26
+attr experiment NonSynchronized
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network UsingCSMACAwithRTS
+attr processid 3056
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.node[*].udpApp[0].startTime "uniform(20ms, 40ms)"
+param **.nodeCount 4
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.node[*].udpApp[*].sendInterval 20ms
+
+vector 0 UsingCSMACAwithRTS.node[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 UsingCSMACAwithRTS.node[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 UsingCSMACAwithRTS.node[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 UsingCSMACAwithRTS.node[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 UsingCSMACAwithRTS.node[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 UsingCSMACAwithRTS.node[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 UsingCSMACAwithRTS.node[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 UsingCSMACAwithRTS.node[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 UsingCSMACAwithRTS.node[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 9 UsingCSMACAwithRTS.node[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 UsingCSMACAwithRTS.node[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 UsingCSMACAwithRTS.node[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 UsingCSMACAwithRTS.node[0].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 13 UsingCSMACAwithRTS.node[0].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 14 UsingCSMACAwithRTS.node[0].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 15 UsingCSMACAwithRTS.node[0].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 16 UsingCSMACAwithRTS.node[0].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 17 UsingCSMACAwithRTS.node[1].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 18 UsingCSMACAwithRTS.node[1].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 19 UsingCSMACAwithRTS.node[1].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 20 UsingCSMACAwithRTS.node[1].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 21 UsingCSMACAwithRTS.node[1].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 22 UsingCSMACAwithRTS.node[2].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 23 UsingCSMACAwithRTS.node[2].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 24 UsingCSMACAwithRTS.node[2].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 25 UsingCSMACAwithRTS.node[2].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 26 UsingCSMACAwithRTS.node[2].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 27 UsingCSMACAwithRTS.node[3].wlan[0].mac.dcf.channelAccess.contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 28 UsingCSMACAwithRTS.node[3].wlan[0].mac.hcf.edca.edcaf[0].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 29 UsingCSMACAwithRTS.node[3].wlan[0].mac.hcf.edca.edcaf[1].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 30 UsingCSMACAwithRTS.node[3].wlan[0].mac.hcf.edca.edcaf[2].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 31 UsingCSMACAwithRTS.node[3].wlan[0].mac.hcf.edca.edcaf[3].contention state:vector ETV
+attr interpolationmode none
+attr source stateChanged
+attr title "contention state, vector"
+vector 32 UsingCSMACAwithRTS.node[3].udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 33 UsingCSMACAwithRTS.node[3].udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 34 UsingCSMACAwithRTS.node[3].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 35 UsingCSMACAwithRTS.node[3].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 36 UsingCSMACAwithRTS.node[3].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 37 UsingCSMACAwithRTS.node[3].udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 38 UsingCSMACAwithRTS.node[3].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 39 UsingCSMACAwithRTS.node[3].udpApp[0] rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 40 UsingCSMACAwithRTS.node[3].udpApp[0] rcvdPkLifetime:vector ETV
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, vector"
+attr unit s
+vector 41 UsingCSMACAwithRTS.node[3].udpApp[0] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(rcvdPk)
+attr title "received packet sequence number, vector"
+vector 42 UsingCSMACAwithRTS.node[3].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 43 UsingCSMACAwithRTS.node[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 44 UsingCSMACAwithRTS.node[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 45 UsingCSMACAwithRTS.node[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 46 UsingCSMACAwithRTS.node[1].udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 47 UsingCSMACAwithRTS.node[1].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr title "packets dropped (wrong port), vector(count)"
+vector 48 UsingCSMACAwithRTS.node[2].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 49 UsingCSMACAwithRTS.node[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 50 UsingCSMACAwithRTS.node[2].udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 51 UsingCSMACAwithRTS.node[2].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr title "packets dropped (wrong port), vector(count)"
+vector 52 UsingCSMACAwithRTS.node[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 53 UsingCSMACAwithRTS.node[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 54 UsingCSMACAwithRTS.node[0].udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 55 UsingCSMACAwithRTS.node[0].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr title "packets dropped (wrong port), vector(count)"
+vector 56 UsingCSMACAwithRTS.node[2].udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 57 UsingCSMACAwithRTS.node[2].udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 58 UsingCSMACAwithRTS.node[2].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 59 UsingCSMACAwithRTS.node[2].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 60 UsingCSMACAwithRTS.node[2].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 61 UsingCSMACAwithRTS.node[2].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 62 UsingCSMACAwithRTS.node[2].udpApp[0] rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 63 UsingCSMACAwithRTS.node[2].udpApp[0] rcvdPkLifetime:vector ETV
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, vector"
+attr unit s
+vector 64 UsingCSMACAwithRTS.node[2].udpApp[0] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(rcvdPk)
+attr title "received packet sequence number, vector"
+vector 65 UsingCSMACAwithRTS.node[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 66 UsingCSMACAwithRTS.node[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 67 UsingCSMACAwithRTS.node[3].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 68 UsingCSMACAwithRTS.node[3].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 69 UsingCSMACAwithRTS.node[0].udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 70 UsingCSMACAwithRTS.node[0].udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 71 UsingCSMACAwithRTS.node[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 72 UsingCSMACAwithRTS.node[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 73 UsingCSMACAwithRTS.node[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 74 UsingCSMACAwithRTS.node[0].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 75 UsingCSMACAwithRTS.node[0].udpApp[0] rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 76 UsingCSMACAwithRTS.node[0].udpApp[0] rcvdPkLifetime:vector ETV
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, vector"
+attr unit s
+vector 77 UsingCSMACAwithRTS.node[0].udpApp[0] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(rcvdPk)
+attr title "received packet sequence number, vector"
+vector 78 UsingCSMACAwithRTS.node[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 79 UsingCSMACAwithRTS.node[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 80 UsingCSMACAwithRTS.node[1].udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 81 UsingCSMACAwithRTS.node[1].udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 82 UsingCSMACAwithRTS.node[1].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 83 UsingCSMACAwithRTS.node[1].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 84 UsingCSMACAwithRTS.node[1].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 85 UsingCSMACAwithRTS.node[1].udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 86 UsingCSMACAwithRTS.node[1].udpApp[0] rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 87 UsingCSMACAwithRTS.node[1].udpApp[0] rcvdPkLifetime:vector ETV
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, vector"
+attr unit s
+vector 88 UsingCSMACAwithRTS.node[1].udpApp[0] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(rcvdPk)
+attr title "received packet sequence number, vector"
+vector 89 UsingCSMACAwithRTS.node[1].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 90 UsingCSMACAwithRTS.node[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 91 UsingCSMACAwithRTS.node[3].udpApp[0] throughput:vector ETV
+attr source throughput(rcvdPk)
+attr title "throughput, vector"
+attr unit bps
+vector 92 UsingCSMACAwithRTS.node[1].udpApp[0] throughput:vector ETV
+attr source throughput(rcvdPk)
+attr title "throughput, vector"
+attr unit bps
+vector 93 UsingCSMACAwithRTS.node[2].udpApp[0] throughput:vector ETV
+attr source throughput(rcvdPk)
+attr title "throughput, vector"
+attr unit bps
+vector 94 UsingCSMACAwithRTS.node[0].udpApp[0] throughput:vector ETV
+attr source throughput(rcvdPk)
+attr title "throughput, vector"
+attr unit bps
+0	18672 356 0 1030 0 0.157197314882 16 0 3 37 95
+1	19028 9 0 0 0 0 1 0 0 0 0
+2	19037 356 0 1058 0 0.157580508925 16 0 3 37 95
+3	19393 9 0 0 0 0 1 0 0 0 0
+4	19402 352 0 983 0 0.147999634164 16 0 3 37 95
+5	19754 9 0 0 0 0 1 0 0 0 0
+6	19763 402 0 1096 0 0.161446259515 18 0 3 42 108
+7	20165 9 0 0 0 0 1 0 0 0 0
+8	20174 1378 0 1094 0 0.161135696311 58 0 3 95 227
+9	21552 1403 0 1097 0 0.161446506017 59 0 3 96 228
+10	22955 1462 0 1103 0 0.161446913519 59 0 3 96 228
+11	24417 1462 0 1096 0 0.161446259515 59 0 3 93 219
+12	25879 3572 0 1094 0 0.161135696311 144 0 2 28 56
+13	29451 2872 0 1094 0 0.161135696311 116 0 0 0 0
+14	32323 2872 0 1094 0 0.161135696311 116 0 0 0 0
+15	35195 2872 0 1094 0 0.161135696311 116 0 0 0 0
+16	38067 2872 0 1094 0 0.161135696311 116 0 0 0 0
+17	40939 3628 0 1097 0 0.161446506017 146 0 2 42 70
+18	44567 2924 0 1097 0 0.161446506017 118 0 0 0 0
+19	47491 2924 0 1097 0 0.161446506017 118 0 0 0 0
+20	50415 2924 0 1097 0 0.161446506017 118 0 0 0 0
+21	53339 2924 0 1097 0 0.161446506017 118 0 0 0 0
+22	56263 3620 0 1103 0 0.161446913519 146 0 2 28 56
+23	59883 2924 0 1103 0 0.161446913519 118 0 0 0 0
+24	62807 2924 0 1103 0 0.161446913519 118 0 0 0 0
+25	65731 2924 0 1103 0 0.161446913519 118 0 0 0 0
+26	68655 2924 0 1103 0 0.161446913519 118 0 0 0 0
+27	71579 3724 0 1096 0 0.161446259515 150 0 2 32 64
+28	75303 2924 0 1096 0 0.161446259515 118 0 0 0 0
+29	78227 2924 0 1096 0 0.161446259515 118 0 0 0 0
+30	81151 2924 0 1096 0 0.161446259515 118 0 0 0 0
+31	84075 2924 0 1096 0 0.161446259515 118 0 0 0 0
+32	86999 216 13 1078 0.021134259515 0.161134259515 8 100 100 800 80000
+33	87215 216 16 1079 0.021134259515 0.161134259515 8 108 108 864 93312
+34	87431 216 18 1081 0.021134259515 0.161134259515 8 128 128 1024 131072
+35	87647 216 18 1081 0.021134259515 0.161134259515 8 128 128 1024 131072
+36	87863 216 21 1084 0.021134259515 0.161134259515 8 164 164 1312 215168
+37	88079 784 22 1085 0.021134259515 0.161134259515 29 108 108 3132 338256
+38	88863 746 22 1085 0.021134259515 0.161134259515 29 1 29 435 8555
+39	89609 784 23 1086 0.021134259515 0.161134259515 29 100 100 2900 290000
+40	90393 999 23 1086 0.021134259515 0.161134259515 29 0 0.001075720682 0.009972680374 6.0555947127457e-006
+41	91392 726 23 1086 0.021134259515 0.161134259515 29 0 7 91 413
+42	92118 216 26 1089 0.021134259515 0.161134259515 8 164 164 1312 215168
+43	92334 800 27 1096 0.021134259515 0.161446259515 32 0 2 32 48
+44	93134 594 35 1098 0.021446506017 0.161446506017 22 164 164 3608 591712
+45	93728 594 35 1098 0.021446506017 0.161446506017 22 164 164 3608 591712
+46	94322 784 38 1101 0.021446506017 0.161446506017 29 108 108 3132 338256
+47	95106 48 38 74 0.021446506017 0.028000062566 2 1 2 3 5
+48	95154 596 40 1104 0.021446913519 0.161446913519 22 164 164 3608 591712
+49	95750 596 40 1104 0.021446913519 0.161446913519 22 164 164 3608 591712
+50	96346 784 43 1107 0.021446913519 0.161446913519 29 108 108 3132 338256
+51	97130 24 43 43 0.021446913519 0.021446913519 1 1 1 1 1
+52	97154 566 45 1072 0.021447696311 0.157581702968 21 164 164 3444 564816
+53	97720 566 45 1072 0.021447696311 0.157581702968 21 164 164 3444 564816
+54	98286 756 48 1075 0.021447696311 0.157581702968 28 108 108 3024 326592
+55	99042 48 48 85 0.021447696311 0.028000547213 2 1 2 3 5
+56	99090 188 49 964 0.027687634164 0.147687634164 7 100 100 700 70000
+57	99278 188 52 965 0.027687634164 0.147687634164 7 108 108 756 81648
+58	99466 188 54 967 0.027687634164 0.147687634164 7 128 128 896 114688
+59	99654 188 54 967 0.027687634164 0.147687634164 7 128 128 896 114688
+60	99842 188 57 970 0.027687634164 0.147687634164 7 164 164 1148 188272
+61	100030 721 58 1107 0.027687634164 0.161446913519 28 1 28 406 7714
+62	100751 758 59 1108 0.027687634164 0.161446913519 28 100 100 2800 280000
+63	101509 975 59 1108 0.027687634164 0.161446913519 28 0 0.001075902582 0.009970287445 6.0553322606818e-006
+64	102484 702 59 1108 0.027687634164 0.161446913519 28 0 7 91 413
+65	103186 188 62 975 0.027687634164 0.147687634164 7 164 164 1148 188272
+66	103374 696 63 983 0.027687634164 0.147999634164 28 0 2 28 42
+67	104070 568 76 1060 0.028000288168 0.157580755427 21 164 164 3444 564816
+68	104638 568 76 1060 0.028000288168 0.157580755427 21 164 164 3444 564816
+69	105206 189 87 1003 0.036885314882 0.156885314882 7 100 100 700 70000
+70	105395 189 90 1004 0.036885314882 0.156885314882 7 108 108 756 81648
+71	105584 189 92 1006 0.036885314882 0.156885314882 7 128 128 896 114688
+72	105773 189 92 1006 0.036885314882 0.156885314882 7 128 128 896 114688
+73	105962 189 95 1009 0.036885314882 0.156885314882 7 164 164 1148 188272
+74	106151 669 96 1075 0.036885314882 0.157581702968 26 1 26 351 6201
+75	106820 704 97 1076 0.036885314882 0.157581702968 26 100 100 2600 260000
+76	107524 899 97 1076 0.036885314882 0.157581702968 26 0 0.001076668223 0.009354776631 5.8711717396132e-006
+77	108423 652 97 1076 0.036885314882 0.157581702968 26 0 6 84 364
+78	109075 190 100 1014 0.036885314882 0.156885314882 7 164 164 1148 188272
+79	109265 704 101 1030 0.036885314882 0.157197314882 28 0 2 28 42
+80	109969 190 106 1020 0.036945034745 0.156945034745 7 100 100 700 70000
+81	110159 190 109 1021 0.036945034745 0.156945034745 7 108 108 756 81648
+82	110349 190 111 1023 0.036945034745 0.156945034745 7 128 128 896 114688
+83	110539 190 111 1023 0.036945034745 0.156945034745 7 128 128 896 114688
+84	110729 190 114 1026 0.036945034745 0.156945034745 7 164 164 1148 188272
+85	110919 696 115 1101 0.036945034745 0.161446506017 27 1 27 378 6930
+86	111615 732 116 1102 0.036945034745 0.161446506017 27 100 100 2700 270000
+87	112347 938 116 1102 0.036945034745 0.161446506017 27 0 0.000313194043 0.006252654227 1.9547877443311e-006
+88	113285 678 116 1102 0.036945034745 0.161446506017 27 0 7 91 413
+89	113963 190 139 1051 0.037348508925 0.157268508925 7 164 164 1148 188272
+90	114153 704 140 1058 0.037348508925 0.157580508925 28 0 2 28 42
+91	114857 19 630 630 0.1 0.1 1 128000 128000 128000 16384000000
+92	114876 19 646 646 0.1 0.1 1 112000 112000 112000 12544000000
+93	114895 19 652 652 0.1 0.1 1 120000 120000 120000 14400000000
+94	114914 19 658 658 0.1 0.1 1 112000 112000 112000 12544000000
+
